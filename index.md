@@ -82,8 +82,10 @@ body {
       <a href="#">View on GitHub</a>
     </div>
     <div class="project-card">
-      <h3>Project Two</h3>
-      <p>Description for your second project.</p>
+      <h3>Immersive Basketball VR Experience</h3>
+      <p>
+      A virtual reality basketball simulation developed in Unity for the Meta Quest 2, focused on creating realistic and immersive shooting mechanics. The project uses physics-based ball interactions, custom shot assist systems, responsive UI, and multiple game         modes to recreate the feel of real basketball in VR. Built using the XR Interaction Toolkit and optimized for standalone VR hardware, the experience was evaluated through user testing, achieving strong results for immersion, realism, and overall enjoyment.
+      </p>
       <a href="assets/PIOCANASTOIMIL25-FINAL.pdf" target="_blank" download>Full Report (PDF)</a>
     </div>
     <div class="project-card">
