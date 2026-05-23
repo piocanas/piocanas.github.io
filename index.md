@@ -1,22 +1,22 @@
 ---
 layout: home
-title: Welcome
+title: ""  # Hides the default page title from minima
 ---
 
 <style>
-/* Remove default minima constraints (minima uses 800px max-width) */
+body {
+  background: linear-gradient(120deg, #f0f4fd 0%, #f9fff2 100%);
+}
 .wrapper {
   max-width: unset !important;
   padding: 0 !important;
 }
-
 .site-header, .site-footer {
   max-width: 1700px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
-
 .main-portfolio-wrapper {
   display: flex;
   align-items: flex-start;
@@ -26,13 +26,12 @@ title: Welcome
   padding: 0;
   gap: 3.5rem;
 }
-
 .sidebar-section {
   width: 29vw; min-width: 270px; max-width: 400px;
-  background: #fafafa;
+  background: #fff4d2;
   padding: 2.2em 1.5em;
   border-radius: 18px;
-  border: 1px solid #eee;
+  border: 1px solid #ffe7a0;
   box-shadow: 0 3px 24px 0 #0001;
   margin-top: 1.5em;
 }
@@ -44,9 +43,9 @@ title: Welcome
   padding-top: 2em;
 }
 .project-card {
-  background: #fff;
+  background: #e3f7ff;
   border-radius: 13px;
-  border: 1px solid #eee;
+  border: 1px solid #b8ebfc;
   padding: 1.2em 1.7em;
   box-shadow: 0 0 16px #0001;
   min-height: 150px;
@@ -59,8 +58,8 @@ title: Welcome
 </style>
 
 <div class="main-portfolio-wrapper">
-
   <div class="sidebar-section">
+    <h1 style="text-align:center;color:#4e92c7;margin-bottom:1.4em;">Welcome</h1>
     <img src="assets/profile.jpg" alt="Your photo" style="width:100%;border-radius:12px;margin-bottom:20px;">
     <h2>About Me</h2>
     <p>Hello! I’m <b>[Your Name]</b>, a passionate <b>[Your Profession]</b>. Welcome to my portfolio!</p>
@@ -70,7 +69,6 @@ title: Welcome
       <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
     </p>
   </div>
-  
   <div class="projects-section">
     <div class="project-card">
       <h3>Project One</h3>
@@ -92,6 +90,5 @@ title: Welcome
       <p>Another project placeholder.</p>
       <a href="#">View on GitHub</a>
     </div>
-    <!-- Add more project cards as needed! -->
   </div>
 </div>
