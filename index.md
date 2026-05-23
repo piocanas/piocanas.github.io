@@ -72,7 +72,7 @@ body {
     </ul>
     <h3>CV</h3>
     <ul style="list-style-type:none;padding-left:0;">
-      <li><strong><a href="assets/CV.pdf" target="_blank" download>Download PDF here</a></li>
+      <li><a href="assets/CV.pdf" target="_blank" download>Download PDF here</a></li>
     </ul>
   </div>
   <div class="projects-section">
