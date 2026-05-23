@@ -1,6 +1,6 @@
 ---
 layout: home
-title: ""  # Hides the default page title from minima
+title: ""
 ---
 
 <style>
@@ -62,7 +62,7 @@ body {
     <h1 style="text-align:center;color:#4e92c7;margin-bottom:1.4em;">Welcome</h1>
     <img src="assets/profile.jpg" alt="Your photo" style="width:100%;border-radius:12px;margin-bottom:20px;">
     <h2>About Me</h2>
-    <p>Hello! I’m <b>[Your Name]</b>, a passionate <b>[Your Profession]</b>. Welcome to my portfolio!</p>
+    <p>Hello! I’m <b>[Name]</b>, a passionate <b>[Profession]</b>. Welcome to my portfolio!</p>
     <h3>Contact</h3>
     <p>
       <a href="mailto:you@example.com">you@example.com</a><br>
@@ -72,7 +72,7 @@ body {
   <div class="projects-section">
     <div class="project-card">
       <h3>Project One</h3>
-      <p>Short description of your project and what makes it special.</p>
+      <p>Short description of project.</p>
       <a href="#">View on GitHub</a>
     </div>
     <div class="project-card">
@@ -82,7 +82,7 @@ body {
     </div>
     <div class="project-card">
       <h3>Project Three</h3>
-      <p>And a third project. Add as many as you want!</p>
+      <p>third project</p>
       <a href="#">View on GitHub</a>
     </div>
     <div class="project-card">
