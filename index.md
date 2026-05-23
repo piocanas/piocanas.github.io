@@ -64,10 +64,16 @@ body {
     <h2>About Me</h2>
     <p>Hello! I’m <b>[Name]</b>, a passionate <b>[Profession]</b>. Welcome to my portfolio!</p>
     <h3>Contact</h3>
-    <p>
-      <a href="mailto:you@example.com">you@example.com</a><br>
-      <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-    </p>
+    <ul style="list-style-type:none;padding-left:0;">
+      <li><strong>E-mail:</strong> <a href="mailto:pio.canas@gmail.com">pio.canas@gmail.com</a></li>
+      <li><strong>Telephone:</strong> +44 07939883521</li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/piocanas" target="_blank">@piocanas</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/piocanastoimil/" target="_blank">linkedin.com/in/piocanastoimil</a></li>
+    </ul>
+    <h3>CV</h3>
+    <ul style="list-style-type:none;padding-left:0;">
+      <li><strong>CV:</strong> <a href="assets/CV.pdf" target="_blank" download>Download PDF here</a></li>
+    </ul>
   </div>
   <div class="projects-section">
     <div class="project-card">
