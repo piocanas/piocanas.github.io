@@ -60,7 +60,7 @@ body {
 <div class="main-portfolio-wrapper">
   <div class="sidebar-section">
     <h1 style="text-align:center;color:#4e92c7;margin-bottom:1.4em;">Welcome</h1>
-    <img src="assets/profile.png" alt="Your photo" style="width:100%;border-radius:12px;margin-bottom:20px;">
+    <img src="assets/profile.jpeg" alt="Your photo" style="width:100%;border-radius:12px;margin-bottom:20px;">
     <h2>About Me</h2>
     <p>Hello! I’m <b>Pío Cañas</b>, a final year student studying Computer Science with High Performance Graphics and Games Engineering.</p>
     <h3>Contact</h3>
