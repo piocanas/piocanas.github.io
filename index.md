@@ -83,6 +83,10 @@ body {
     </div>
     <div class="project-card">
       <h3>Immersive Basketball VR Experience</h3>
+        <video width="100%" controls>
+          <source src="assets/gameplay1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       <p>
       A virtual reality basketball simulation developed in Unity for the Meta Quest 2, focused on creating realistic and immersive shooting mechanics. The project uses physics-based ball interactions, custom shot assist systems, responsive UI, and multiple game         modes to recreate the feel of real basketball in VR. Built using the XR Interaction Toolkit and optimized for standalone VR hardware, the experience was evaluated through user testing, achieving strong results for immersion, realism, and overall enjoyment.
       </p>
