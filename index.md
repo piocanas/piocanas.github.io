@@ -84,7 +84,7 @@ body {
     <div class="project-card">
       <h3>Immersive Basketball VR Experience</h3>
         <video width="100%" controls>
-          <source src="assets/gameplay1.mp4" type="video/mp4">
+          <source src="assets/Gameplay.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       <p>
