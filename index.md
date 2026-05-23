@@ -60,7 +60,7 @@ body {
 <div class="main-portfolio-wrapper">
   <div class="sidebar-section">
     <h1 style="text-align:center;color:#4e92c7;margin-bottom:1.4em;">Welcome</h1>
-    <img src="assets/profile.jpg" alt="Your photo" style="width:100%;border-radius:12px;margin-bottom:20px;">
+    <img src="assets/profile.png" alt="Your photo" style="width:100%;border-radius:12px;margin-bottom:20px;">
     <h2>About Me</h2>
     <p>Hello! I’m <b>[Name]</b>, a passionate <b>[Profession]</b>. Welcome to my portfolio!</p>
     <h3>Contact</h3>
