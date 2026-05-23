@@ -84,7 +84,6 @@ body {
     <div class="project-card">
       <h3>Project Two</h3>
       <p>Description for your second project.</p>
-      <a href="#">View on GitHub</a><br>
       <a href="assets/PIOCANASTOIMIL25-FINAL.pdf" target="_blank" download>Full Report (PDF)</a>
     </div>
     <div class="project-card">
