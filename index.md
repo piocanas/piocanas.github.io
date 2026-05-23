@@ -3,67 +3,64 @@ layout: home
 title: Welcome
 ---
 
-# Welcome to My Portfolio
+<style>
+.main-wrapper {
+  display: flex;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+.left-section {
+  flex-basis: 300px;
+  flex-shrink: 0;
+  background: #fafafa;
+  padding: 1.2em;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.right-section {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.3em;
+}
+.project-card {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  padding: 1em;
+  box-shadow: 0 0 6px #0001;
+}
+@media (max-width: 800px) {
+  .main-wrapper { flex-direction: column; }
+  .right-section { grid-template-columns: 1fr; }
+}
+</style>
 
-Welcome to my personal website, built with Jekyll and GitHub Pages!
+<div class="main-wrapper">
 
----
-
-## About Me
-
-Hello! I’m [Your Name], a [your profession or area of study, e.g. "software developer" or "student"] passionate about [your interests, e.g. "web development, data science, and open source"].
-
-<!-- Add a photo by uploading it to your repo and placing it here, e.g.: -->
-<!-- ![My Photo](assets/images/profile.jpg) -->
-
----
-
-## Projects
-
-- **Project One**  
-  _Short description of the project. What does it do? What did you contribute?_  
-  [View on GitHub](#)
-
-- **Project Two**  
-  _Short description of the project. What is interesting or unique about it?_  
-  [View on GitHub](#)
-
-- (Add more projects as you build your portfolio!)
-
----
-
-## Skills
-
-- Programming: Python, JavaScript, [add more…]
-- Tools: VSCode, Git, [add more…]
-- Frameworks/Libraries: React, Flask, [add more…]
-
----
-
-## Experience
-
-**[Job or Internship Title]**, [Company Name]  
-Month Year – Month Year  
-- Short summary of responsibilities and accomplishments
-
-<!-- Add more experiences here -->
-
----
-
-## Education
-
-**[Degree or Program]**, [School Name]  
-Year – Year  
-- Any relevant courses or honors
-
----
-
-## Contact
-
-You can reach me via [email@example.com](mailto:email@example.com) or on [LinkedIn](https://linkedin.com/in/yourprofile).
-
----
-
-Want even more? You can add new pages (about.md, projects.md, etc.) and link to them from this homepage or the navigation menu. Let me know if you want help with that!
-
-Would you like me to update your index.md with this template now? If you want the nav menu or extra pages too, just ask!
+  <div class="left-section">
+    <img src="assets/profile.jpg" alt="Your photo" style="width:100%;border-radius: 8px;margin-bottom:15px;">
+    <h2>About Me</h2>
+    <p>Hello! I’m [Your Name], a passionate [Your Profession].</p>
+    <h3>Contact</h3>
+    <p>
+      <a href="mailto:you@example.com">you@example.com</a><br>
+      <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+    </p>
+  </div>
+  
+  <div class="right-section">
+    <div class="project-card">
+      <h3>Project One</h3>
+      <p>Short description of the project.</p>
+      <a href="#">View on GitHub</a>
+    </div>
+    <div class="project-card">
+      <h3>Project Two</h3>
+      <p>Short description of the second project.</p>
+      <a href="#">View on GitHub</a>
+    </div>
+    <!-- Add more project cards as needed -->
+  </div>
+</div>
