@@ -14,7 +14,7 @@ body {
   padding: 0 !important;
 }
 .site-header, .site-footer {
-  max-width: 1700px;
+  max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -22,11 +22,12 @@ body {
 .main-portfolio-wrapper {
   display: flex;
   align-items: flex-start;
+  
   min-height: 70vh;
   max-width: 1700px;
   margin: 0 auto;
   padding: 0;
-  gap: 3.5rem;
+  gap: 1.5rem;
 }
 .sidebar-section {
   width: 29vw; min-width: 270px; max-width: 400px;
@@ -133,7 +134,6 @@ body {
       <li><a href="assets/CV.pdf" target="_blank" download>Download PDF here</a></li>
     </ul>
   </div>
-  <!-- Tailwind grid and gap-4 for projects section -->
   <div class="projects-section grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="project-card">
       <h3>Killswitch Engine & Hellmist</h3>
@@ -185,7 +185,7 @@ body {
           Your browser does not support the video tag.
         </video>
       <p>
-      A virtual reality basketball simulation developed in Unity for the Meta Quest 2, focused on creating realistic and immersive shooting mechanics. The project uses physics-based ball interact[...]
+        A Unity-based VR basketball game for Meta Quest 2 featuring realistic shooting physics, custom throw assist mechanics, immersive audio-visual feedback, and multiple gameplay modes designed to simulate the feel of real basketball.
       </p>
       <a href="assets/PIOCANASTOIMIL25-FINAL.pdf" target="_blank" download>Full Report (PDF)</a>
     </div>
