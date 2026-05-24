@@ -3,7 +3,6 @@ layout: home
 title: ""
 ---
 
-<!-- Tailwind CDN for utility classes (including gap-4) -->
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
@@ -38,7 +37,6 @@ body {
   box-shadow: 0 3px 24px 0 #0001;
   margin-top: 1.5em;
 }
-/* REMOVE custom grid/gap styles from projects-section */
 .project-card {
   background: #e3f7ff;
   border-radius: 13px;
