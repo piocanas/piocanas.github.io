@@ -105,7 +105,7 @@ body {
   </div>
   <div class="projects-section">
   <div class="project-card">
-  <h3>Killswitch Engine & Hellmist Demo</h3>
+  <h3>Killswitch Engine & Hellmist</h3>
   <video width="100%" controls>
     <source src="assets/killswitch-demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -154,7 +154,6 @@ body {
   </div>
 </div>
 
-<script>
 <script>
 function expandPoster() {
   document.getElementById('killswitch-poster-expand').classList.add('poster-expanded');
