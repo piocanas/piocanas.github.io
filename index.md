@@ -106,29 +106,29 @@ body {
   </div>
   <div class="projects-section">
   <div class="project-card">
-  <h3>Killswitch Engine & Hellmist</h3>
+  <h3>Killswitch Engine & Hellmist Demo</h3>
   <video width="100%" controls poster="assets/killswitch-poster.png">
     <source src="assets/killswitch-demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <p>
     <b>Killswitch Engine</b> is a 3D C++ custom game engine developed as a group project, featuring component-based architecture and real-time rendering.<br>
-    <b>Hellmist</b> is a third-person horror game built using the engine, showcasing forward rendering, animation, and scripted gameplay.
+    <b>Hellmist</b> is a third-person horror demo game built using the engine, showcasing forward rendering, animation, and scripted gameplay.
   </p>
   <ul style="list-style-type: none; padding-left: 0;">
     <li>
       <a href="assets/killswitch-report.pdf" target="_blank" download>Download Full Report (PDF)</a>
     </li>
     <li>
+      <a href="assets/killswitch-poster.png" target="_blank" download>Download Poster as Image</a>
+    </li>
+    <li>
       <button id="expandBtn" class="pretty-btn" onclick="expandPoster()">Expand Poster</button>
+      <button id="collapseBtn" class="pretty-btn" style="display:none;margin-left:0;" onclick="collapsePoster()">Collapse Poster</button>
     </li>
   </ul>
   <div id="killswitch-poster-expand" class="poster-expand-container">
     <img src="assets/killswitch-poster.png" alt="Killswitch Engine Poster" style="width:100%;border-radius:8px;">
-    <br>
-    <a href="assets/killswitch-poster.png" target="_blank" download class="pretty-btn" style="margin-top:0.4em;">Download Poster as Image</a>
-    <br>
-    <button id="collapseBtn" class="pretty-btn" style="margin-bottom:0.5em;" onclick="collapsePoster()">Collapse Poster</button>
   </div>
 </div>
     <div class="project-card">
@@ -156,12 +156,15 @@ body {
 </div>
 
 <script>
+<script>
 function expandPoster() {
   document.getElementById('killswitch-poster-expand').classList.add('poster-expanded');
   document.getElementById('expandBtn').style.display = 'none';
+  document.getElementById('collapseBtn').style.display = 'inline-block';
 }
 function collapsePoster() {
   document.getElementById('killswitch-poster-expand').classList.remove('poster-expanded');
   document.getElementById('expandBtn').style.display = 'inline-block';
+  document.getElementById('collapseBtn').style.display = 'none';
 }
 </script>
