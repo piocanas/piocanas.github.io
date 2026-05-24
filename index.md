@@ -3,6 +3,9 @@ layout: home
 title: ""
 ---
 
+<!-- Tailwind CDN for utility classes (including gap-4) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
 <style>
 body {
   background: linear-gradient(120deg, #f0f4fd 0%, #f9fff2 100%);
@@ -35,13 +38,7 @@ body {
   box-shadow: 0 3px 24px 0 #0001;
   margin-top: 1.5em;
 }
-.projects-section {
-  flex: 1 1 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(270px, 1fr));
-  gap: 2.2em 1.6em;
-  padding-top: 2em;
-}
+/* REMOVE custom grid/gap styles from projects-section */
 .project-card {
   background: #e3f7ff;
   border-radius: 13px;
@@ -64,7 +61,6 @@ body {
 @media (max-width: 1100px) {
   .main-portfolio-wrapper { flex-direction: column; gap: 1.5em; }
   .sidebar-section { width: 100%; max-width: none; }
-  .projects-section { grid-template-columns: 1fr; padding-top: 1em;}
 }
 .pretty-btn {
   background: linear-gradient(90deg, #7fc1fa 50%, #4e92c7 100%);
@@ -139,50 +135,51 @@ body {
       <li><a href="assets/CV.pdf" target="_blank" download>Download PDF here</a></li>
     </ul>
   </div>
-  <div class="projects-section">
-  <div class="project-card">
-  <h3>Killswitch Engine & Hellmist</h3>
-  <video width="100%" controls>
-    <source src="assets/killswitch-demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <p>
-    <b>Killswitch Engine</b> is a 3D C++ custom game engine developed as a group project, featuring component-based architecture and real-time rendering.<br>
-    <b>Hellmist</b> is a third-person horror demo game built using the engine, showcasing forward rendering, animation, and scripted gameplay.
-  </p>
-  <ul style="list-style-type: none; padding-left: 0;">
-    <li>
-      <a href="assets/killswitch-report.pdf" target="_blank" download>Download Full Report (PDF)</a>
-    </li>
-    <li>
-      <a href="assets/killswitch-poster.png" target="_blank" download>Download Poster as Image</a>
-    </li>
-    <li>
-      <a href="https://github.com/LiamSwarbrick/KillSwitch-Vulkan-Engine" target="_blank">View Project on GitHub</a>
-    </li>
-    <li>
-      <button id="expandBtn" class="pretty-btn" onclick="expandPoster()">Expand Poster</button>
-      <button id="collapseBtn" class="pretty-btn" style="display:none;margin-left:0;" onclick="collapsePoster()">Collapse Poster</button>
-    </li>
-  </ul>
-<div id="killswitch-poster-expand" class="poster-expand-container">
-  <img 
-    src="assets/killswitch-poster.png" 
-    alt="Killswitch Engine Poster" 
-    style="width:100%;border-radius:8px;cursor:zoom-in;"
-    onclick="openPosterModal();" 
-    title="Click to enlarge"
-  >
-  <br>
-  <small style="color:#666;">Click the poster to enlarge within the page.</small>
-</div>
+  <!-- Tailwind grid and gap-4 for projects section -->
+  <div class="projects-section grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="project-card">
+      <h3>Killswitch Engine & Hellmist</h3>
+      <video width="100%" controls>
+        <source src="assets/killswitch-demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>
+        <b>Killswitch Engine</b> is a 3D C++ custom game engine developed as a group project, featuring component-based architecture and real-time rendering.<br>
+        <b>Hellmist</b> is a third-person horror demo game built using the engine, showcasing forward rendering, animation, and scripted gameplay.
+      </p>
+      <ul style="list-style-type: none; padding-left: 0;">
+        <li>
+          <a href="assets/killswitch-report.pdf" target="_blank" download>Download Full Report (PDF)</a>
+        </li>
+        <li>
+          <a href="assets/killswitch-poster.png" target="_blank" download>Download Poster as Image</a>
+        </li>
+        <li>
+          <a href="https://github.com/LiamSwarbrick/KillSwitch-Vulkan-Engine" target="_blank">View Project on GitHub</a>
+        </li>
+        <li>
+          <button id="expandBtn" class="pretty-btn" onclick="expandPoster()">Expand Poster</button>
+          <button id="collapseBtn" class="pretty-btn" style="display:none;margin-left:0;" onclick="collapsePoster()">Collapse Poster</button>
+        </li>
+      </ul>
+      <div id="killswitch-poster-expand" class="poster-expand-container">
+        <img 
+          src="assets/killswitch-poster.png" 
+          alt="Killswitch Engine Poster" 
+          style="width:100%;border-radius:8px;cursor:zoom-in;"
+          onclick="openPosterModal();" 
+          title="Click to enlarge"
+        >
+        <br>
+        <small style="color:#666;">Click the poster to enlarge within the page.</small>
+      </div>
 
-<!-- Lightbox Modal (add just before </body> or at end of index.md) -->
-<div id="poster-modal" class="modal-backdrop" onclick="closePosterModal()" style="display:none;">
-  <span class="modal-close" onclick="closePosterModal();event.stopPropagation();">&times;</span>
-  <img src="assets/killswitch-poster.png" alt="Killswitch Engine Poster (Enlarged)">
-</div>
-</div>
+      <!-- Lightbox Modal -->
+      <div id="poster-modal" class="modal-backdrop" onclick="closePosterModal()" style="display:none;">
+        <span class="modal-close" onclick="closePosterModal();event.stopPropagation();">&times;</span>
+        <img src="assets/killswitch-poster.png" alt="Killswitch Engine Poster (Enlarged)">
+      </div>
+    </div>
     <div class="project-card">
       <h3>Immersive Basketball VR Experience</h3>
         <video width="100%" controls>
@@ -190,7 +187,7 @@ body {
           Your browser does not support the video tag.
         </video>
       <p>
-      A virtual reality basketball simulation developed in Unity for the Meta Quest 2, focused on creating realistic and immersive shooting mechanics. The project uses physics-based ball interactions, custom shot assist systems, responsive UI, and multiple game         modes to recreate the feel of real basketball in VR. Built using the XR Interaction Toolkit and optimized for standalone VR hardware, the experience was evaluated through user testing, achieving strong results for immersion, realism, and overall enjoyment.
+      A virtual reality basketball simulation developed in Unity for the Meta Quest 2, focused on creating realistic and immersive shooting mechanics. The project uses physics-based ball interact[...]
       </p>
       <a href="assets/PIOCANASTOIMIL25-FINAL.pdf" target="_blank" download>Full Report (PDF)</a>
     </div>
@@ -218,12 +215,8 @@ function collapsePoster() {
   document.getElementById('expandBtn').style.display = 'inline-block';
   document.getElementById('collapseBtn').style.display = 'none';
 }
-</script>
-
-<script>
 function openPosterModal() {
   document.getElementById('poster-modal').style.display = 'flex';
-  // Prevent the background page from scrolling while modal is open
   document.body.style.overflow = 'hidden';
 }
 function closePosterModal() {
