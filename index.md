@@ -50,10 +50,39 @@ body {
   box-shadow: 0 0 16px #0001;
   min-height: 150px;
 }
+.poster-expand-container {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  margin-top: 1em;
+}
+.poster-expand-container.poster-expanded {
+  max-height: 1000px;
+  opacity: 1;
+}
 @media (max-width: 1100px) {
   .main-portfolio-wrapper { flex-direction: column; gap: 1.5em; }
   .sidebar-section { width: 100%; max-width: none; }
   .projects-section { grid-template-columns: 1fr; padding-top: 1em;}
+}
+.pretty-btn {
+  background: linear-gradient(90deg, #7fc1fa 50%, #4e92c7 100%);
+  border: none;
+  color: #fff;
+  padding: 0.6em 1.4em;
+  margin-top: 0.7em;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: inherit;
+  box-shadow: 0 2px 8px #0002;
+  cursor: pointer;
+  transition: background 0.16s, box-shadow 0.16s, transform 0.09s;
+}
+.pretty-btn:hover {
+  background: linear-gradient(90deg, #54b4f5 50%, #376899 100%);
+  box-shadow: 0 4px 16px #0002;
+  transform: translateY(-2px) scale(1.04);
 }
 </style>
 
@@ -93,14 +122,21 @@ body {
     <li>
       <button id="expandBtn" onclick="document.getElementById('killswitch-poster-expand').style.display='block'; this.style.display='none';">Expand Poster</button>
     </li>
-  </ul>
-  <div id="killswitch-poster-expand" style="display:none;margin-top:1em;">
-    <img src="assets/killswitch-poster.png" alt="Killswitch Engine Poster" style="width:100%;border-radius:8px;">
-    <br>
-    <a href="assets/killswitch-poster.png" target="_blank" download>Download Poster as Image</a>
-    <br>
-    <button onclick="document.getElementById('killswitch-poster-expand').style.display='none'; document.getElementById('expandBtn').style.display='inline-block';">Collapse Poster</button>
-  </div>
+  <ul style="list-style-type: none; padding-left: 0;">
+  <li>
+    <a href="assets/killswitch-report.pdf" target="_blank" download>Download Full Report (PDF)</a>
+  </li>
+  <li>
+    <button id="expandBtn" class="pretty-btn" onclick="expandPoster()">Expand Poster</button>
+  </li>
+</ul>
+<div id="killswitch-poster-expand" class="poster-expand-container">
+  <img src="assets/killswitch-poster.png" alt="Killswitch Engine Poster" style="width:100%;border-radius:8px;">
+  <br>
+  <a href="assets/killswitch-poster.png" target="_blank" download class="pretty-btn" style="margin-top:0.4em;">Download Poster as Image</a>
+  <br>
+  <button id="collapseBtn" class="pretty-btn" style="margin-bottom:0.5em;" onclick="collapsePoster()">Collapse Poster</button>
+</div>
 </div>
     <div class="project-card">
       <h3>Immersive Basketball VR Experience</h3>
@@ -125,3 +161,14 @@ body {
     </div>
   </div>
 </div>
+
+<script>
+function expandPoster() {
+  document.getElementById('killswitch-poster-expand').classList.add('poster-expanded');
+  document.getElementById('expandBtn').style.display = 'none';
+}
+function collapsePoster() {
+  document.getElementById('killswitch-poster-expand').classList.remove('poster-expanded');
+  document.getElementById('expandBtn').style.display = 'inline-block';
+}
+</script>
