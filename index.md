@@ -98,8 +98,8 @@ body {
   backdrop-filter: blur(2px);
 }
 .modal-backdrop img {
-  max-width: 90vw;
-  max-height: 95vh;
+  max-width: 97vw;
+  max-height: 97vh;
   background: #fff;
   border-radius: 13px;
   box-shadow: 0 4px 32px #000b, 0 0 0 3px #fff;
@@ -156,6 +156,9 @@ body {
     </li>
     <li>
       <a href="assets/killswitch-poster.png" target="_blank" download>Download Poster as Image</a>
+    </li>
+    <li>
+      <a href="https://github.com/LiamSwarbrick/KillSwitch-Vulkan-Engine" target="_blank">View Project on GitHub</a>
     </li>
     <li>
       <button id="expandBtn" class="pretty-btn" onclick="expandPoster()">Expand Poster</button>
