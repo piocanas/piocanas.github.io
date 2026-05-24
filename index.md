@@ -88,18 +88,17 @@ body {
 
 <div class="main-portfolio-wrapper">
   <div class="sidebar-section">
-    <h1 style="text-align:center;color:#4e92c7;margin-bottom:1.4em;">Welcome</h1>
     <img src="assets/profile.jpg" alt="Your photo" style="width:100%;border-radius:12px;margin-bottom:20px;">
-    <h2>About Me</h2>
+    <h1>About Me</h1>
     <p>Hello! I’m <b>Pío Cañas</b>, a final year student studying Computer Science with High Performance Graphics and Games Engineering at the University of Leeds.</p>
-    <h3>Contact</h3>
+    <h2>Contact</h2>
     <ul style="list-style-type:none;padding-left:0;">
       <li><strong>E-mail:</strong> <a href="mailto:pio.canas@gmail.com">pio.canas@gmail.com</a></li>
       <li><strong>Telephone:</strong> +44 07939883521</li>
       <li><strong>GitHub:</strong> <a href="https://github.com/piocanas" target="_blank">@piocanas</a></li>
       <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/piocanastoimil/" target="_blank">linkedin.com/in/piocanastoimil</a></li>
     </ul>
-    <h3>CV</h3>
+    <h2>CV</h2>
     <ul style="list-style-type:none;padding-left:0;">
       <li><a href="assets/CV.pdf" target="_blank" download>Download PDF here</a></li>
     </ul>
@@ -107,7 +106,7 @@ body {
   <div class="projects-section">
   <div class="project-card">
   <h3>Killswitch Engine & Hellmist Demo</h3>
-  <video width="100%" controls poster="assets/killswitch-poster.png">
+  <video width="100%" controls>
     <source src="assets/killswitch-demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
