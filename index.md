@@ -76,11 +76,30 @@ body {
     </ul>
   </div>
   <div class="projects-section">
-    <div class="project-card">
-      <h3>Project One</h3>
-      <p>Short description of project.</p>
-      <a href="#">View on GitHub</a>
+  <div class="project-card">
+    <h3>Killswitch Engine & Hellmist Demo</h3>
+    <video width="100%" controls poster="assets/killswitch-poster.png">
+      <source src="assets/killswitch-demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>
+      <b>Killswitch Engine</b> is a 3D C++ custom game engine developed as a group project, featuring component-based architecture and real-time rendering. <br>
+      <b>Hellmist</b> is a third-person fantasy demo game built using the engine, showcasing forward rendering, animation, and scripted gameplay.
+    </p>
+    <ul style="list-style-type: none; padding-left: 0;">
+      <li>
+        <a href="assets/killswitch-report.pdf" target="_blank" download>Download Full Report (PDF)</a>
+      </li>
+      <li>
+        <button onclick="document.getElementById('killswitch-poster-expand').style.display='block'; this.style.display='none';">Expand Poster</button>
+      </li>
+    </ul>
+    <div id="killswitch-poster-expand" style="display:none;margin-top:1em;">
+      <img src="assets/killswitch-poster.png" alt="Killswitch Engine Poster" style="width:100%;border-radius:8px;">
+      <br>
+      <a href="assets/killswitch-poster.png" target="_blank" download>Download Poster as Image</a>
     </div>
+  </div>
     <div class="project-card">
       <h3>Immersive Basketball VR Experience</h3>
         <video width="100%" controls>
