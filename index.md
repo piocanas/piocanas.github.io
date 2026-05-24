@@ -32,7 +32,7 @@ body {
 .sidebar-section {
   width: 29vw; min-width: 270px; max-width: 400px;
   background: #fff4d2;
-  padding: 2.2em 1.5em;
+  padding: 1.5em 1.5em;
   border-radius: 18px;
   border: 1px solid #ffe7a0;
   box-shadow: 0 3px 24px 0 #0001;
