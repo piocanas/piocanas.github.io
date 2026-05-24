@@ -1,0 +1,114 @@
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<div class="min-h-screen bg-gradient-to-br from-slate-100 via-sky-50 to-emerald-50 text-slate-800">
+  <div class="mx-auto max-w-[1700px] px-4 py-6 lg:px-6">
+    <div class="flex flex-col gap-6 lg:flex-row lg:items-start">
+      <aside class="w-full rounded-3xl border border-amber-200 bg-amber-50/90 p-6 shadow-[0_10px_30px_rgba(15,23,42,0.08)] lg:sticky lg:top-6 lg:w-[38%] lg:min-w-[350px] lg:max-w-[560px]">
+        <img src="assets/profile.jpg" alt="Your photo" class="mb-5 aspect-[4/5] w-full rounded-2xl object-cover shadow-md">
+        <h1 class="mb-3 border-b-2 border-indigo-900 pb-2 text-3xl font-black tracking-tight text-slate-900">About Me</h1>
+        <p class="text-[1.02rem] leading-7 text-slate-700">Hello! I’m <b>Pío Cañas</b>, a final year student studying Computer Science with High Performance Graphics and Games Engineering at the University of Leeds.</p>
+
+        <h2 class="mt-6 mb-3 text-sm font-extrabold uppercase tracking-[0.14em] text-slate-900">Contact</h2>
+        <ul class="space-y-2 text-[1.02rem] leading-7">
+          <li><strong>E-mail:</strong> <a class="font-semibold text-blue-600 hover:text-blue-700" href="mailto:pio.canas@gmail.com">pio.canas@gmail.com</a></li>
+          <li><strong>Telephone:</strong> <a class="font-semibold text-blue-600 hover:text-blue-700" href="tel:+4407939883521">+44 07939883521</a></li>
+          <li><strong>GitHub:</strong> <a class="font-semibold text-blue-600 hover:text-blue-700" href="https://github.com/piocanas" target="_blank">@piocanas</a></li>
+          <li class="break-words"><strong>LinkedIn:</strong> <a class="font-semibold text-blue-600 hover:text-blue-700" href="https://www.linkedin.com/in/piocanastoimil/" target="_blank">linkedin.com/in/piocanastoimil</a></li>
+        </ul>
+
+        <h2 class="mt-6 mb-3 text-sm font-extrabold uppercase tracking-[0.14em] text-slate-900">CV</h2>
+        <ul class="space-y-2 text-[1.02rem] leading-7">
+          <li><a class="font-semibold text-blue-600 hover:text-blue-700" href="assets/CV.pdf" target="_blank" download>Download PDF here</a></li>
+        </ul>
+      </aside>
+
+      <main class="grid flex-1 grid-cols-1 gap-5 md:grid-cols-2">
+        <article class="flex min-h-[150px] flex-col rounded-2xl border border-sky-200 bg-sky-50 p-6 shadow-[0_10px_25px_rgba(15,23,42,0.08)]">
+          <h3 class="mb-3 border-b-2 border-indigo-900 pb-2 text-2xl font-black tracking-tight text-slate-900">Killswitch Engine & Hellmist</h3>
+          <video class="mb-3 block w-full rounded-xl ring-1 ring-sky-200" controls>
+            <source src="assets/killswitch-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="mb-4 leading-7 text-slate-700">
+            <b>Killswitch Engine</b> is a 3D C++ custom game engine developed as a group project, featuring component-based architecture and real-time rendering.<br>
+            <b>Hellmist</b> is a third-person horror demo game built using the engine, showcasing forward rendering, animation, and scripted gameplay.
+          </p>
+          <ul class="space-y-2 text-[1.02rem]">
+            <li><a class="font-semibold text-blue-600 hover:text-blue-700" href="assets/killswitch-report.pdf" target="_blank" download>Download Full Report (PDF)</a></li>
+            <li><a class="font-semibold text-blue-600 hover:text-blue-700" href="assets/killswitch-poster.png" target="_blank" download>Download Poster as Image</a></li>
+            <li><a class="font-semibold text-blue-600 hover:text-blue-700" href="https://github.com/LiamSwarbrick/KillSwitch-Vulkan-Engine" target="_blank">View Project on GitHub</a></li>
+            <li class="pt-1">
+              <button id="expandBtn" class="rounded-lg bg-gradient-to-r from-sky-300 to-sky-500 px-5 py-2 font-semibold text-white shadow-md transition duration-150 hover:-translate-y-0.5 hover:from-sky-400 hover:to-sky-600 hover:shadow-lg" onclick="expandPoster()">Expand Poster</button>
+              <button id="collapseBtn" class="ml-0 hidden rounded-lg bg-gradient-to-r from-sky-300 to-sky-500 px-5 py-2 font-semibold text-white shadow-md transition duration-150 hover:-translate-y-0.5 hover:from-sky-400 hover:to-sky-600 hover:shadow-lg" onclick="collapsePoster()">Collapse Poster</button>
+            </li>
+          </ul>
+          <div id="killswitch-poster-expand" class="mt-4 max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out">
+            <img src="assets/killswitch-poster.png" alt="Killswitch Engine Poster" class="w-full cursor-zoom-in rounded-xl" onclick="openPosterModal();" title="Click to enlarge">
+            <p class="mt-2 text-sm text-slate-500">Click the poster to enlarge within the page.</p>
+          </div>
+
+          <div id="poster-modal" class="fixed inset-0 z-[1001] hidden items-center justify-center bg-slate-950/90 p-4 backdrop-blur-sm" onclick="closePosterModal()">
+            <button class="absolute right-6 top-6 text-4xl font-bold text-white drop-shadow-lg transition hover:text-sky-300" onclick="closePosterModal();event.stopPropagation();" aria-label="Close preview">&times;</button>
+            <img src="assets/killswitch-poster.png" alt="Killswitch Engine Poster (Enlarged)" class="max-h-[97vh] max-w-[97vw] rounded-2xl bg-white shadow-2xl ring-4 ring-white/90">
+          </div>
+        </article>
+
+        <article class="flex min-h-[150px] flex-col rounded-2xl border border-sky-200 bg-sky-50 p-6 shadow-[0_10px_25px_rgba(15,23,42,0.08)]">
+          <h3 class="mb-3 border-b-2 border-indigo-900 pb-2 text-2xl font-black tracking-tight text-slate-900">Immersive Basketball VR Experience</h3>
+          <video class="mb-3 block w-full rounded-xl ring-1 ring-sky-200" controls>
+            <source src="assets/Gameplay.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="mb-4 leading-7 text-slate-700">
+            A Unity-based VR basketball game for Meta Quest 2 featuring realistic shooting physics, custom throw assist mechanics, immersive audio-visual feedback, and multiple gameplay modes designed to simulate the feel of real basketball.
+          </p>
+          <a class="mt-auto inline-block font-semibold text-blue-600 hover:text-blue-700" href="assets/PIOCANASTOIMIL25-FINAL.pdf" target="_blank" download>Full Report (PDF)</a>
+        </article>
+
+        <article class="flex min-h-[150px] flex-col rounded-2xl border border-sky-200 bg-sky-50 p-6 shadow-[0_10px_25px_rgba(15,23,42,0.08)]">
+          <h3 class="mb-3 border-b-2 border-indigo-900 pb-2 text-2xl font-black tracking-tight text-slate-900">Project Three</h3>
+          <p class="mb-4 leading-7 text-slate-700">third project</p>
+          <a class="mt-auto inline-block font-semibold text-blue-600 hover:text-blue-700" href="#">View on GitHub</a>
+        </article>
+
+        <article class="flex min-h-[150px] flex-col rounded-2xl border border-sky-200 bg-sky-50 p-6 shadow-[0_10px_25px_rgba(15,23,42,0.08)]">
+          <h3 class="mb-3 border-b-2 border-indigo-900 pb-2 text-2xl font-black tracking-tight text-slate-900">Project Four</h3>
+          <p class="mb-4 leading-7 text-slate-700">Another project placeholder.</p>
+          <a class="mt-auto inline-block font-semibold text-blue-600 hover:text-blue-700" href="#">View on GitHub</a>
+        </article>
+      </main>
+    </div>
+  </div>
+</div>
+
+<script>
+function expandPoster() {
+  const poster = document.getElementById('killswitch-poster-expand');
+  poster.classList.remove('max-h-0', 'opacity-0');
+  poster.classList.add('max-h-[1000px]', 'opacity-100');
+  document.getElementById('expandBtn').classList.add('hidden');
+  document.getElementById('collapseBtn').classList.remove('hidden');
+}
+
+function collapsePoster() {
+  const poster = document.getElementById('killswitch-poster-expand');
+  poster.classList.add('max-h-0', 'opacity-0');
+  poster.classList.remove('max-h-[1000px]', 'opacity-100');
+  document.getElementById('expandBtn').classList.remove('hidden');
+  document.getElementById('collapseBtn').classList.add('hidden');
+}
+
+function openPosterModal() {
+  document.getElementById('poster-modal').classList.remove('hidden');
+  document.getElementById('poster-modal').classList.add('flex');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePosterModal() {
+  const modal = document.getElementById('poster-modal');
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+  document.body.style.overflow = 'auto';
+}
+</script>
