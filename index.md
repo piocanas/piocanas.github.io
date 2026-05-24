@@ -84,6 +84,42 @@ body {
   box-shadow: 0 4px 16px #0002;
   transform: translateY(-2px) scale(1.04);
 }
+.modal-backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(20, 33, 56, 0.88);
+  backdrop-filter: blur(2px);
+}
+.modal-backdrop img {
+  max-width: 90vw;
+  max-height: 95vh;
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 4px 32px #000b, 0 0 0 3px #fff;
+}
+.modal-close {
+  position: absolute;
+  top: 32px;
+  right: 50px;
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1100;
+  filter: drop-shadow(1px 2px 4px #000a);
+  transition: color 0.16s;
+}
+.modal-close:hover {
+  color: #7fc1fa;
+}
 </style>
 
 <div class="main-portfolio-wrapper">
@@ -126,9 +162,23 @@ body {
       <button id="collapseBtn" class="pretty-btn" style="display:none;margin-left:0;" onclick="collapsePoster()">Collapse Poster</button>
     </li>
   </ul>
-  <div id="killswitch-poster-expand" class="poster-expand-container">
-    <img src="assets/killswitch-poster.png" alt="Killswitch Engine Poster" style="width:100%;border-radius:8px;">
-  </div>
+<div id="killswitch-poster-expand" class="poster-expand-container">
+  <img 
+    src="assets/killswitch-poster.png" 
+    alt="Killswitch Engine Poster" 
+    style="width:100%;border-radius:8px;cursor:zoom-in;"
+    onclick="openPosterModal();" 
+    title="Click to enlarge"
+  >
+  <br>
+  <small style="color:#666;">Click the poster to enlarge within the page.</small>
+</div>
+
+<!-- Lightbox Modal (add just before </body> or at end of index.md) -->
+<div id="poster-modal" class="modal-backdrop" onclick="closePosterModal()" style="display:none;">
+  <span class="modal-close" onclick="closePosterModal();event.stopPropagation();">&times;</span>
+  <img src="assets/killswitch-poster.png" alt="Killswitch Engine Poster (Enlarged)">
+</div>
 </div>
     <div class="project-card">
       <h3>Immersive Basketball VR Experience</h3>
@@ -164,5 +214,17 @@ function collapsePoster() {
   document.getElementById('killswitch-poster-expand').classList.remove('poster-expanded');
   document.getElementById('expandBtn').style.display = 'inline-block';
   document.getElementById('collapseBtn').style.display = 'none';
+}
+</script>
+
+<script>
+function openPosterModal() {
+  document.getElementById('poster-modal').style.display = 'flex';
+  // Prevent the background page from scrolling while modal is open
+  document.body.style.overflow = 'hidden';
+}
+function closePosterModal() {
+  document.getElementById('poster-modal').style.display = 'none';
+  document.body.style.overflow = 'auto';
 }
 </script>
