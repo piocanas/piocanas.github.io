@@ -1,7 +1,25 @@
-<script src="https://cdn.tailwindcss.com"></script>
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pío Cañas | Computer Science, Graphics, and Games</title>
+  <meta name="description" content="Pío Cañas is a final year Computer Science student at the University of Leeds specializing in high performance graphics and games engineering.">
+  <link rel="canonical" href="https://piocanas.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://piocanas.github.io/">
+  <meta property="og:title" content="Pío Cañas | Computer Science, Graphics, and Games">
+  <meta property="og:description" content="Portfolio of Pío Cañas, featuring game engines, rendering projects, VR work, ray tracing, animation, and topology analysis.">
+  <meta property="og:image" content="https://piocanas.github.io/assets/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pío Cañas | Computer Science, Graphics, and Games">
+  <meta name="twitter:description" content="Portfolio of Pío Cañas, featuring game engines, rendering projects, VR work, ray tracing, animation, and topology analysis.">
+  <meta name="twitter:image" content="https://piocanas.github.io/assets/profile.jpg">
   <link rel="icon" type="image/png" href="assets/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
+<body>
 
 <div class="min-h-screen bg-gradient-to-br from-gray-50 via-sky-50 to-indigo-50 text-slate-900">
   <div class="mx-auto max-w-[1700px] px-4 py-6 lg:px-6">
@@ -53,21 +71,6 @@
             animation, and scripted gameplay.<br>
             Technical poster summarising the engine architecture, rendering pipeline and all other components is available below.
           </p>
-          <ul class="space-y-2 text-[1.02rem]">
-            <li><a class="font-semibold text-indigo-600 hover:text-indigo-700" href="assets/killswitch-report.pdf"
-                target="_blank" download>Download Full Report (PDF)</a></li>
-            <li><a class="font-semibold text-indigo-600 hover:text-indigo-700"
-                href="https://github.com/LiamSwarbrick/KillSwitch-Vulkan-Engine" target="_blank">View Project on
-                GitHub</a></li>
-            <li class="pt-1">
-              <button id="expandBtn"
-                class="rounded-lg bg-gradient-to-r from-indigo-500 to-indigo-600 px-5 py-2 font-semibold text-white shadow-md transition duration-150 hover:-translate-y-0.5 hover:from-indigo-600 hover:to-indigo-700 hover:shadow-lg"
-                onclick="expandPoster()">Expand Poster</button>
-              <button id="collapseBtn"
-                class="ml-0 hidden rounded-lg bg-gradient-to-r from-indigo-500 to-indigo-600 px-5 py-2 font-semibold text-white shadow-md transition duration-150 hover:-translate-y-0.5 hover:from-indigo-600 hover:to-indigo-700 hover:shadow-lg"
-                onclick="collapsePoster()">Collapse Poster</button>
-            </li>
-          </ul>
           <div id="killswitch-poster-expand"
             class="mt-4 max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out">
 
@@ -82,6 +85,24 @@
                 Download Poster as Image
               </a>
             </div>
+          </div>
+
+          <div class="mt-auto flex flex-col gap-4">
+            <ul class="space-y-2 text-[1.02rem]">
+              <li><a class="font-semibold text-indigo-600 hover:text-indigo-700" href="assets/killswitch-report.pdf"
+                  target="_blank" download>Download Full Report (PDF)</a></li>
+              <li><a class="font-semibold text-indigo-600 hover:text-indigo-700"
+                  href="https://github.com/LiamSwarbrick/KillSwitch-Vulkan-Engine" target="_blank">View Project on
+                  GitHub</a></li>
+              <li class="pt-1">
+                <button id="expandBtn"
+                  class="rounded-lg bg-gradient-to-r from-indigo-500 to-indigo-600 px-5 py-2 font-semibold text-white shadow-md transition duration-150 hover:-translate-y-0.5 hover:from-indigo-600 hover:to-indigo-700 hover:shadow-lg"
+                  onclick="expandPoster()">Expand Poster</button>
+                <button id="collapseBtn"
+                  class="ml-0 hidden rounded-lg bg-gradient-to-r from-indigo-500 to-indigo-600 px-5 py-2 font-semibold text-white shadow-md transition duration-150 hover:-translate-y-0.5 hover:from-indigo-600 hover:to-indigo-700 hover:shadow-lg"
+                  onclick="collapsePoster()">Collapse Poster</button>
+              </li>
+            </ul>
           </div>
 
           <div id="poster-modal"
@@ -109,8 +130,12 @@
             mechanics, immersive audio-visual feedback, and multiple gameplay modes designed to simulate the feel of
             real basketball.
           </p>
-          <a class="mt-auto inline-block font-semibold text-indigo-600 hover:text-indigo-700"
-            href="assets/PIOCANASTOIMIL25-FINAL.pdf" target="_blank" download>Full Report (PDF)</a>
+          <div class="mt-auto flex flex-col gap-1">
+            <a class="inline-block font-semibold text-indigo-600 hover:text-indigo-700"
+              href="assets/PIOCANASTOIMIL25-FINAL.pdf" target="_blank" download>Download Full Report (PDF)</a>
+            <a class="inline-block font-semibold text-indigo-600 hover:text-indigo-700"
+              href="https://github.com/piocanas/BasketballVRRoom" target="_blank">View Project on GitHub</a>
+          </div>
         </article>
 
         <article
@@ -129,6 +154,8 @@
             include alpha-masked foliage rendering and a render-to-texture post-processing pass implementing a mosaic
             pixelation effect.</p>
 
+          <div class="mt-auto text-sm text-slate-500 italic">Code available on request</div>
+
         </article>
 
         <article
@@ -143,6 +170,8 @@
             intersections, barycentric interpolation, Blinn-Phong shading, hard and soft shadows, recursive reflections,
             refraction, Fresnel effects, Monte Carlo path tracing, area light sampling, anti-aliasing, coloured
             transparency using Beer-Lambert absorption, and refractive caustics.</p>
+
+          <div class="mt-auto text-sm text-slate-500 italic">Code available on request</div>
 
         </article>
 
@@ -161,6 +190,8 @@
             collision approximation, extended to support uneven terrain using height sampling across multiple switchable
             landscapes.</p>
 
+          <div class="mt-auto text-sm text-slate-500 italic">Code available on request</div>
+
         </article>
 
 
@@ -176,6 +207,8 @@
           <p class="mb-4 leading-7 text-slate-700">Developed a C++ geometry-processing pipeline capable of constructing
             directed-edge meshes, detecting manifold topology errors, repairing mesh holes, computing surface genus
             using Euler characteristics, and performing curvature-based mesh simplification.</p>
+
+          <div class="mt-auto text-sm text-slate-500 italic">Code available on request</div>
 
         </article>
       </main>
@@ -213,3 +246,5 @@
     document.body.style.overflow = 'auto';
   }
 </script>
+</body>
+</html>
